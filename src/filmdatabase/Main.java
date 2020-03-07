@@ -10,13 +10,14 @@ public class Main {
 		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
 		while(true) {
-			System.out.println("Velg usecase 1-5");
+			System.out.println("Velg usecase: ");
+			System.out.println("1: Finne navnet på alle rollene en gitt skuespiller har ");
 			int usecase = Integer.parseInt(input.readLine());
 			if(usecase==0) {
 				System.out.println("Break");
 				break;
 			}  
-			if(usecase==1) {
+			if(usecase==9) {
 				Film f = new Film();
 				f.connect();
 				/*
@@ -41,6 +42,13 @@ public class Main {
 				String format = "kino";
 				f.leggTilFilm(tittel, lengde, arstall, dato, beskrivelse, format);
 				System.out.println("Lagt til"+tittel);
+			}
+			if(usecase==1) {
+				Rolle r = new Rolle();
+				r.connect();
+				System.out.println("Skriv navnet for skuespiller");
+				String rolle = input.readLine();
+				r.finnRolle(rolle);
 			}
 			
 		}

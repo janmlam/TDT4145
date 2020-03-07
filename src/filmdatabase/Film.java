@@ -9,7 +9,6 @@ public class Film extends DBConn{
 		try {
 			String query = "INSERT INTO filmdatabase.film "
 					+ "VALUES (DEFAULT,'"+tittel+"', '"+lengde+"', '"+arstall+"','"+dato+"','"+beskrivelse+"','" +format+"')"; 
-			System.out.println(query);
 			state = conn.createStatement();
 			state.executeUpdate(query);
 		} catch (SQLException e) {
