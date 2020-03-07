@@ -10,39 +10,18 @@ public class Main {
 		BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
 
 		while(true) {
-			System.out.println("Velg usecase: ");
-			System.out.println("1: Finne navnet på alle rollene en gitt skuespiller har ");
+			System.out.println("Velg usecase ved å skrive et tall fra 1-5. Avslutt med å skrive 0");
+			System.out.println("1: Finne navnet på alle rollene en gitt skuespiller har.");
+			System.out.println("2: Finne hvilke filmer som en gitt skuespiller opptrer i.");
+			System.out.println("3: Finne hvilke filmselskap som lager flest filmer inne hver sjanger (grøssere, familie,\r\n" + 
+					"o.l.).");
+			System.out.println("4: Sette inn en ny film med regissør, manusforfattere, skuespillere og det som hører med.");
+			System.out.println("5: Sette inn ny anmeldelse av en episode av en serie.");
 			int usecase = Integer.parseInt(input.readLine());
 			if(usecase==0) {
 				System.out.println("Break");
 				break;
 			}  
-			if(usecase==9) {
-				Film f = new Film();
-				f.connect();
-				/*
-				System.out.println("Skriv tittel (string)");
-				String tittel = input.readLine();
-				System.out.println("Skriv lengde (int)");
-				int lengde = Integer.parseInt(input.readLine());
-				System.out.println("Skriv årstall (int)");
-				int arstall = Integer.parseInt(input.readLine());
-				System.out.println("Skriv utgivelsesdato (YYYY-MM-DD)");
-				String dato = input.readLine();
-				System.out.println("Skriv beskrivelse (string)");
-				String beskrivelse = input.readLine();
-				System.out.println("Skriv format (Video/Kino/Streaming) (string)");
-				String format = input.readLine();
-				*/
-				String tittel = "Captain America";
-				int lengde = 124;
-				int arstall = 2011;
-				String dato = "2011-07-22";
-				String beskrivelse = "Steve rogers";
-				String format = "kino";
-				f.leggTilFilm(tittel, lengde, arstall, dato, beskrivelse, format);
-				System.out.println("Lagt til"+tittel);
-			}
 			if(usecase==1) {
 				Rolle r = new Rolle();
 				r.connect();
@@ -50,7 +29,13 @@ public class Main {
 				String rolle = input.readLine();
 				r.finnRolle(rolle);
 			}
-			
+			if(usecase==2) {
+				finnFilm ff = new finnFilm();
+				ff.connect();
+				System.out.println("Skriv navnet for skuespiller");
+				String skuespiller = input.readLine();
+				ff.finneFilm(skuespiller);
+			}
 		}
 		input.close();
 	}
