@@ -14,11 +14,6 @@ public class DBConn {
 	public void connect() throws IOException {
 		String url = "jdbc:mysql://localhost:3306/filmdatabase";
 		try {
-//			System.out.println("Brukernavn for din sql");
-//			String brukernavn = input.readLine();
-//			System.out.println("Passord for din sql");
-//			String passord = input.readLine();
-//			conn = DriverManager.getConnection(url, brukernavn, passord);
 			conn = DriverManager.getConnection(url, "root", "root");
 			System.out.println("Connection funker");
 		} catch (SQLException e) {

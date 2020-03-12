@@ -17,7 +17,6 @@ public class finnFilm extends DBConn {
 			while(rs.next()) {
 				System.out.println(rs.getString("tittel"));
 			}
-
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}

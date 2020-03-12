@@ -8,7 +8,6 @@ public class finnSelskap extends DBConn {
 	public void finneSelskap() {
 		Statement state = null;
 		try {
-			System.out.println("ASD");
 			String query = "SELECT url, sjanger.navn, count(*) FROM filmdatabase.selskap " 
 					+ "INNER JOIN filmdatabase.filmselskap ON selskap.selskapID = filmselskap.selskapID "  
 					+ "INNER JOIN filmdatabase.film ON filmselskap.filmid = film.filmid " 

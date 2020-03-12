@@ -28,8 +28,3 @@ public class anmeldelse extends DBConn {
 		}
 	}
 }
-
-
-
-
-

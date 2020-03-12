@@ -87,7 +87,9 @@ public class leggeTilAlt extends DBConn {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		System.out.println("Vellykket innsetting av film og tilhørende skuespiller, regissør, manusforfatter i Filmdatabase");
 	}
+	
 }
 
 
