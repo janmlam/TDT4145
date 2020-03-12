@@ -3,12 +3,22 @@ package filmdatabase;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 
 public class DBConn {
 	Connection conn = null;	
-	public void connect() {
+	BufferedReader input = new BufferedReader(new InputStreamReader(System.in));
+	public void connect() throws IOException {
 		String url = "jdbc:mysql://localhost:3306/filmdatabase";
 		try {
+//			System.out.println("Brukernavn for din sql");
+//			String brukernavn = input.readLine();
+//			System.out.println("Passord for din sql");
+//			String passord = input.readLine();
+//			conn = DriverManager.getConnection(url, brukernavn, passord);
 			conn = DriverManager.getConnection(url, "root", "root");
 			System.out.println("Connection funker");
 		} catch (SQLException e) {

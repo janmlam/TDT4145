@@ -9,9 +9,11 @@ INSERT INTO filmdatabase.film VALUES(DEFAULT,"Star Wars Ep9",150,2019,"2019-12-2
 
 INSERT INTO filmdatabase.filmperson VALUES(DEFAULT,"Chris Evans","Skuespiller","1981-06-13","USA"),(DEFAULT,"Christian Bale","Skuespiller","1974-01-30","UK"),
 (DEFAULT,"Ryan Reynolds","Skuespiller","1976-10-23","Canada");
-
 INSERT INTO filmdatabase.tilknyttettil VALUES (1,2,"Bruce Wayne"),(2,1,"Frank Adler"),(3,3,"Wade Wilson"),(4,1, "Steve Rogers");
 
 INSERT INTO filmdatabase.sjanger VALUES(DEFAULT, "Action","spenning"),(DEFAULT, "Grøsser","spooky"),(DEFAULT, "Komedie","morsom"),(DEFAULT, "SciFi","high tech");
-
 INSERT INTO filmdatabase.filmsjanger VALUES(1,1),(2,3),(3,1),(4,1),(5,4),(6,2),(7,3),(8,3),(9,3),(10,3);
+
+INSERT INTO filmdatabase.selskap VALUES(DEFAULT, "www.123.no","gate1","norge"),(DEFAULT, "www.asd.no","gate2","sverige"),(DEFAULT, "www.qwe.no","gate3","danmark");
+
+INSERT INTO filmdatabase.filmselskap VALUES (1,1),(2,1),(3,1),(4,2),(5,3),(6,3),(7,1),(8,1),(9,2),(10,2);
